@@ -1,0 +1,13 @@
+name: UnikoHyperSpaceAPI
+main: com.unikohyperspace.unikohyperspaceapi.UnikoHyperSpaceAPI
+version: 1.0
+api-version: 1.18
+commands:
+  UnikoHyperSpaceAPI:
+    description: "該插件的主要命令。"
+    aliases: [ uhs ]
+    permission: "UnikoHyperSpaceAPI.Admin"
+permissions:
+  UnikoHyperSpaceAPI.reload:
+    description: "用於重新讀取UnikoHyperSpace所開發的插件。"
+    default: op
