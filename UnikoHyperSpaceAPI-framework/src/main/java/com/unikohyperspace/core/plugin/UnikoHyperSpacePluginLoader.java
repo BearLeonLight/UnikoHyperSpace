@@ -1,14 +1,12 @@
-
-
 package com.unikohyperspace.core.plugin;
 
 import com.unikohyperspace.Utils;
 import com.unikohyperspace.api.event.UnikoHyperSpacePluginDisableEvent;
 import com.unikohyperspace.api.event.UnikoHyperSpacePluginEnableEvent;
 import com.unikohyperspace.api.event.UnikoHyperSpacePluginReloadEvent;
-import com.unikohyperspace.api.plugin.UnikoHyperSpacePlugin;
 import com.unikohyperspace.api.plugin.PluginLoader;
 import com.unikohyperspace.api.plugin.PluginRegister;
+import com.unikohyperspace.api.plugin.UnikoHyperSpacePlugin;
 import com.unikohyperspace.core.reflect.CraftBukkitReflect;
 import org.jetbrains.annotations.NotNull;
 
@@ -17,6 +15,7 @@ import java.util.*;
 
 /**
  * 用於將Uniko插件加載的載入器
+ *
  * @author UnikoHyperSpace
  */
 public final class UnikoHyperSpacePluginLoader
@@ -32,6 +31,7 @@ public final class UnikoHyperSpacePluginLoader
 
     /**
      * 建構子
+     *
      * @param plugin 插件
      */
     public UnikoHyperSpacePluginLoader(final @NotNull UnikoHyperSpacePlugin plugin) {
@@ -77,6 +77,7 @@ public final class UnikoHyperSpacePluginLoader
 
     /**
      * 調用一個插件註冊動作方法
+     *
      * @param actionType 動作類型
      */
     private void execute(final @NotNull PluginRegister.ActionType actionType) {
@@ -89,6 +90,7 @@ public final class UnikoHyperSpacePluginLoader
 
     /**
      * 排序一個插件註冊動作的所有方法(優先等級)
+     *
      * @param actionType 動作類型
      */
     private void sortedExecute(final @NotNull PluginRegister.ActionType actionType) {
@@ -99,7 +101,7 @@ public final class UnikoHyperSpacePluginLoader
             if (method.isAnnotationPresent(PluginRegister.class) && method.getAnnotation(PluginRegister.class).type().equals(actionType))
                 methods.add(method);
 
-        if (methods.size() > 1) {
+        if (methods.size() > 0) {
             // 根據 Register 做優先等級排序
             final List<Method> sortedMethods = methods.stream().sorted(
                     Comparator.comparing(a -> a.getAnnotation(PluginRegister.class).priority())
@@ -112,6 +114,7 @@ public final class UnikoHyperSpacePluginLoader
 
     /**
      * 獲取該紀錄器插件
+     *
      * @return 插件
      */
     @NotNull

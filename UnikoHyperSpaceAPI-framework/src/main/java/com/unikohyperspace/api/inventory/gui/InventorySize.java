@@ -1,9 +1,8 @@
-
-
 package com.unikohyperspace.api.inventory.gui;
 
 /**
  * 代表一個介面大小的枚舉
+ *
  * @author UnikoHyperSpace
  */
 public enum InventorySize {
@@ -20,6 +19,7 @@ public enum InventorySize {
 
     /**
      * 建構子
+     *
      * @param size 大小
      */
     InventorySize(int size) {
@@ -28,6 +28,7 @@ public enum InventorySize {
 
     /**
      * 獲取大小
+     *
      * @return 大小
      */
     public final int getSize() {
@@ -36,6 +37,7 @@ public enum InventorySize {
 
     /**
      * 轉換成字串類型
+     *
      * @return 字串
      */
     @Override

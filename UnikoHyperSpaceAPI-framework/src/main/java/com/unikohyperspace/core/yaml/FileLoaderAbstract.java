@@ -1,9 +1,7 @@
-
-
 package com.unikohyperspace.core.yaml;
 
-import com.unikohyperspace.api.yaml.FileSection;
 import com.unikohyperspace.api.plugin.UnikoHyperSpacePlugin;
+import com.unikohyperspace.api.yaml.FileSection;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.jetbrains.annotations.NotNull;
 
@@ -12,6 +10,7 @@ import java.io.IOException;
 
 /**
  * 載入黨案所需的IO處理類別
+ *
  * @author UnikoHyperSpace
  */
 public abstract class FileLoaderAbstract
@@ -20,9 +19,10 @@ public abstract class FileLoaderAbstract
 
     /**
      * 建構子
-     * @param plugin 插件
-     * @param path 檔案路徑
-     * @param name 檔案
+     *
+     * @param plugin    插件
+     * @param path      檔案路徑
+     * @param name      檔案
      * @param isNewFile 是否新創建
      */
     public FileLoaderAbstract(final @NotNull UnikoHyperSpacePlugin plugin, final @NotNull String path, final @NotNull String name, final boolean isNewFile) {
@@ -35,8 +35,7 @@ public abstract class FileLoaderAbstract
             if (isNewFile) {
                 if (!this.createFile(fileObj))
                     this.getPlugin().getDebugger().warning("§c創建一個新的檔案配置失敗，這是一個錯誤訊息。");
-            }
-            else
+            } else
                 this.getPlugin().saveResource(path + name, false);
         }
 
@@ -52,6 +51,7 @@ public abstract class FileLoaderAbstract
 
     /**
      * 將特定檔案載入
+     *
      * @param file 檔案
      */
     public final void load(final @NotNull File file) {
@@ -68,6 +68,7 @@ public abstract class FileLoaderAbstract
 
     /**
      * 保存至指定實體檔案
+     *
      * @param file 實體檔案
      */
     public final void save(final @NotNull File file) {
@@ -82,6 +83,7 @@ public abstract class FileLoaderAbstract
 
     /**
      * 創建檔案方法
+     *
      * @param file 檔案
      * @return 是否成功創建
      */
@@ -89,7 +91,9 @@ public abstract class FileLoaderAbstract
         if (!file.exists()) {
             try {
                 return file.createNewFile();
-            } catch (final IOException ignored) { return false; }
+            } catch (final IOException ignored) {
+                return false;
+            }
         }
         return true;
     }

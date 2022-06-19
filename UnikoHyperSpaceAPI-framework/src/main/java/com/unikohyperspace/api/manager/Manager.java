@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.api.manager;
 
 import org.jetbrains.annotations.NotNull;
@@ -9,25 +7,29 @@ import java.util.Collection;
 
 /**
  * 代表一個基礎的管理器介面
+ *
  * @author UnikoHyperSpace
  */
 public interface Manager<K, V> {
 
     /**
      * 添加資料到管理器中
-     * @param key k
+     *
+     * @param key   k
      * @param value v
      */
     void add(@NotNull K key, @NotNull V value);
 
     /**
      * 從管理器中刪除資料
+     *
      * @param key k
      */
     void remove(@NotNull K key);
 
     /**
      * 從管理器中獲取資料
+     *
      * @param key k
      * @return v
      */
@@ -35,6 +37,7 @@ public interface Manager<K, V> {
 
     /**
      * 檢查該管理器中是否有資料
+     *
      * @param key k
      * @return v
      */
@@ -42,6 +45,7 @@ public interface Manager<K, V> {
 
     /**
      * 獲取管理器中所有的 value
+     *
      * @return 集合
      */
     @NotNull Collection<V> getValues();

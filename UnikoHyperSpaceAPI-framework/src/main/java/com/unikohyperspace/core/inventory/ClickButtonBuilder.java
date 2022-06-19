@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.inventory;
 
 import com.unikohyperspace.api.inventory.button.ClickButton;
@@ -16,6 +14,7 @@ import java.util.List;
 
 /**
  * 代表一個可點擊的按鈕建構器
+ *
  * @author UnikoHyperSpace
  */
 public class ClickButtonBuilder
@@ -28,6 +27,7 @@ public class ClickButtonBuilder
 
     /**
      * 建構子
+     *
      * @param material 材質
      * @param slot     介面位置
      */
@@ -37,6 +37,7 @@ public class ClickButtonBuilder
 
     /**
      * 建構子
+     *
      * @param material 材質
      * @param amount   數量
      * @param slot     介面位置
@@ -47,6 +48,7 @@ public class ClickButtonBuilder
 
     /**
      * 建構子
+     *
      * @param itemStack 物品實例
      * @param slot      介面位置
      */
@@ -63,6 +65,7 @@ public class ClickButtonBuilder
 
     /**
      * 當被點擊時調用
+     *
      * @param event 事件
      */
     protected void onClick(final @NotNull ClickButtonEvent event) {
@@ -70,6 +73,7 @@ public class ClickButtonBuilder
 
     /**
      * 執行監聽事件
+     *
      * @param event 事件
      */
     public final void executeButtonClick(final @NotNull ClickButtonEvent event) {
@@ -79,6 +83,7 @@ public class ClickButtonBuilder
 
     /**
      * 獲取點擊的方法
+     *
      * @return 點擊方法
      */
     @NotNull

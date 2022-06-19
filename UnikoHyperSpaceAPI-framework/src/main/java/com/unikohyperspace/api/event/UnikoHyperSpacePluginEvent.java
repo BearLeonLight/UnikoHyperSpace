@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.api.event;
 
 import com.unikohyperspace.api.plugin.UnikoHyperSpacePlugin;
@@ -7,6 +5,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 代表Uniko插件的事件
+ *
  * @author UnikoHyperSpace
  */
 public abstract class UnikoHyperSpacePluginEvent
@@ -18,6 +17,7 @@ public abstract class UnikoHyperSpacePluginEvent
 
     /**
      * 建構子
+     *
      * @param plugin 插件
      */
     public UnikoHyperSpacePluginEvent(@NotNull UnikoHyperSpacePlugin plugin) {
@@ -26,6 +26,7 @@ public abstract class UnikoHyperSpacePluginEvent
 
     /**
      * 獲取事件的插件
+     *
      * @return 插件
      */
     @NotNull

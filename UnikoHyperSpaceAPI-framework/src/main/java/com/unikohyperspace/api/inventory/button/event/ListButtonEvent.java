@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.api.inventory.button.event;
 
 import com.unikohyperspace.api.inventory.button.ListButton;
@@ -10,6 +8,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 代表清單按鈕點擊事件
+ *
  * @author UnikoHyperSpace
  */
 public class ListButtonEvent
@@ -17,10 +16,11 @@ public class ListButtonEvent
 
     /**
      * 建構子
-     * @param gui         介面
-     * @param player      玩家
-     * @param button      按鈕
-     * @param clickType   點擊方法
+     *
+     * @param gui       介面
+     * @param player    玩家
+     * @param button    按鈕
+     * @param clickType 點擊方法
      */
     public ListButtonEvent(final @NotNull GUI gui,
                            final @NotNull Player player,

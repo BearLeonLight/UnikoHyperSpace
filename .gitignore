@@ -2,15 +2,6 @@
 /shelf/
 /workspace.xml
 
-### IntelliJ IDEA ###
-.idea/
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
-*.iml
-*.ipr
 
 ### NetBeans ###
 /nbproject/private/
@@ -38,7 +29,7 @@ build/
 *.rar
 
 # User-specific stuff
-.idea/
+/.idea/
 
 *.iml
 *.ipr
@@ -53,3 +44,5 @@ out/
 
 # BlueJ files
 *.ctxt
+/libraries/
+

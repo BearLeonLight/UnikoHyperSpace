@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.inventory;
 
 import com.unikohyperspace.api.inventory.button.ListButton;
@@ -20,6 +18,7 @@ import java.util.List;
 
 /**
  * 代表一個有清單列表的按鈕建構器
+ *
  * @author UnikoHyperSpace
  */
 public class ListButtonBuilder
@@ -36,8 +35,9 @@ public class ListButtonBuilder
 
     /**
      * 建構子
-     * @param gui       介面
-     * @param slot      介面位置
+     *
+     * @param gui  介面
+     * @param slot 介面位置
      */
     public ListButtonBuilder(final @NotNull GUI gui, final int slot) {
         super(gui, new ItemStack(Material.ACACIA_BUTTON), slot);
@@ -57,6 +57,7 @@ public class ListButtonBuilder
 
     /**
      * 選取下一個項目
+     *
      * @param event 點擊事件
      */
     protected final void nextContent(final @NotNull ClickButtonEvent event) {
@@ -70,6 +71,7 @@ public class ListButtonBuilder
 
     /**
      * 選取上一個項目
+     *
      * @param event 點擊事件
      */
     protected final void previousContent(final @NotNull ClickButtonEvent event) {
@@ -83,6 +85,7 @@ public class ListButtonBuilder
 
     /**
      * 當被點擊時調用
+     *
      * @param event 事件
      */
     @Override
@@ -95,6 +98,7 @@ public class ListButtonBuilder
 
     /**
      * 當選取項目改變時調用
+     *
      * @param event 事件
      */
     protected void onSelectChange(final @NotNull ListButtonEvent event) {
@@ -108,9 +112,10 @@ public class ListButtonBuilder
      * {@code @Override}
      * {@code @NotNull}
      * public ItemStack build() {
-     *      this.lore(List.of( ... ));
-     *      return super.build();
+     * this.lore(List.of( ... ));
+     * return super.build();
      * }
+     *
      * @return 物品
      */
     @Override
@@ -135,6 +140,7 @@ public class ListButtonBuilder
 
     /**
      * 獲取清單內容管理器
+     *
      * @return 內容管理器
      */
     @NotNull
@@ -144,6 +150,7 @@ public class ListButtonBuilder
 
     /**
      * 代表清單按鈕樣式
+     *
      * @author UnikoHyperSpace
      */
     protected static class ListButtonStyle {
@@ -160,6 +167,7 @@ public class ListButtonBuilder
 
         /**
          * 轉換選取樣式
+         *
          * @param content 內容
          * @return 樣式
          */

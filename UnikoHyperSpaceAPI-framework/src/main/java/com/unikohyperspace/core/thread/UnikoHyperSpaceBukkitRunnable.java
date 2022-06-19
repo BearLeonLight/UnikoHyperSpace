@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.thread;
 
 import com.unikohyperspace.api.plugin.UnikoHyperSpacePlugin;
@@ -9,6 +7,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 代表一個Uniko自訂程序
+ *
  * @author UnikoHyperSpace
  */
 public abstract class UnikoHyperSpaceBukkitRunnable
@@ -27,6 +26,7 @@ public abstract class UnikoHyperSpaceBukkitRunnable
 
     /**
      * 建構子
+     *
      * @param plugin 插件
      * @param period 璇還週期
      */
@@ -36,8 +36,9 @@ public abstract class UnikoHyperSpaceBukkitRunnable
 
     /**
      * 建構子
+     *
      * @param plugin 插件
-     * @param delay 開始延遲
+     * @param delay  開始延遲
      * @param period 璇還週期
      */
     public UnikoHyperSpaceBukkitRunnable(final @NotNull UnikoHyperSpacePlugin plugin, final long delay, final long period) {
@@ -77,6 +78,7 @@ public abstract class UnikoHyperSpaceBukkitRunnable
 
     /**
      * 獲取該程序的插件
+     *
      * @return 插件
      */
     @NotNull
@@ -104,6 +106,7 @@ public abstract class UnikoHyperSpaceBukkitRunnable
 
     /**
      * 設定程序開始時延遲週期
+     *
      * @param delay 新延遲
      * @return 該實例
      */
@@ -114,6 +117,7 @@ public abstract class UnikoHyperSpaceBukkitRunnable
 
     /**
      * 設定程序環延遲週期
+     *
      * @param period 新週期
      * @return 該實例
      */

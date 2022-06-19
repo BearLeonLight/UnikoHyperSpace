@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.thread;
 
 import com.unikohyperspace.api.plugin.UnikoHyperSpacePlugin;
@@ -7,6 +5,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 代表一個計時器
+ *
  * @author UnikoHyperSpace
  */
 public abstract class UnikoHyperSpaceTimeRunnable
@@ -18,6 +17,7 @@ public abstract class UnikoHyperSpaceTimeRunnable
 
     /**
      * 建構子
+     *
      * @param plugin 插件
      * @param period 璇還週期
      */
@@ -27,6 +27,7 @@ public abstract class UnikoHyperSpaceTimeRunnable
 
     /**
      * 建構子
+     *
      * @param plugin 插件
      * @param delay  開始延遲
      * @param period 璇還週期
@@ -50,6 +51,7 @@ public abstract class UnikoHyperSpaceTimeRunnable
 
     /**
      * 獲取計時器最大秒數
+     *
      * @return 最大秒數
      */
     public final int getMaxCount() {
@@ -58,6 +60,7 @@ public abstract class UnikoHyperSpaceTimeRunnable
 
     /**
      * 獲取計時器目前秒數
+     *
      * @return 目前秒數
      */
     public final int getNowCount() {

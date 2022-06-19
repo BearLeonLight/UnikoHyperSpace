@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.itemstack;
 
 import com.unikohyperspace.Utils;
@@ -23,6 +21,7 @@ import java.util.Map;
 
 /**
  * 代表一個物品的建構類別
+ *
  * @author UnikoHyperSpace
  */
 public class ItemStackBuilder
@@ -33,6 +32,7 @@ public class ItemStackBuilder
 
     /**
      * 建構子
+     *
      * @param material 材質
      */
     public ItemStackBuilder(final @NotNull Material material) {
@@ -41,8 +41,9 @@ public class ItemStackBuilder
 
     /**
      * 建構子
+     *
      * @param material 材質
-     * @param amount 數量
+     * @param amount   數量
      */
     public ItemStackBuilder(final @NotNull Material material, final int amount) {
         this(new ItemStack(material, amount));
@@ -50,6 +51,7 @@ public class ItemStackBuilder
 
     /**
      * 建構子
+     *
      * @param itemStack 物品實例
      */
     public ItemStackBuilder(final @NotNull ItemStack itemStack) {
@@ -58,6 +60,7 @@ public class ItemStackBuilder
 
     /**
      * 設定物品類型
+     *
      * @param material 材質
      * @return 當前的建構器
      */
@@ -69,6 +72,7 @@ public class ItemStackBuilder
 
     /**
      * 設定數量
+     *
      * @param amount 數量
      * @return 當前的建構器
      */
@@ -80,8 +84,9 @@ public class ItemStackBuilder
 
     /**
      * 添加附魔
+     *
      * @param enchantment 附魔
-     * @param level 水平
+     * @param level       水平
      * @return 當前的建構器
      */
     @NotNull
@@ -92,6 +97,7 @@ public class ItemStackBuilder
 
     /**
      * 集體附魔
+     *
      * @param enchantments 附魔集合
      * @return 當前的建構器
      */
@@ -103,6 +109,7 @@ public class ItemStackBuilder
 
     /**
      * 刪除一個附魔
+     *
      * @param enchantment 附魔
      * @return 當前的建構器
      */
@@ -114,6 +121,7 @@ public class ItemStackBuilder
 
     /**
      * 設定本地化名稱
+     *
      * @param name 名稱
      * @return 當前的建構器
      */
@@ -129,6 +137,7 @@ public class ItemStackBuilder
 
     /**
      * 物品是否為不可破壞
+     *
      * @param unbreakable 是或否
      * @return 當前的建構器
      */
@@ -144,6 +153,7 @@ public class ItemStackBuilder
 
     /**
      * 沒有說明 (尚未之用途)
+     *
      * @param data ?
      * @return 當前的建構器
      */
@@ -159,14 +169,15 @@ public class ItemStackBuilder
 
     /**
      * 沒有說明 (尚未之用途)
-     * @param attribute ?
+     *
+     * @param attribute         ?
      * @param attributeModifier ?
      * @return 當前的建構器
      */
     @NotNull
     public final ItemBuilder attributeModifier(final @NotNull Attribute attribute, final @NotNull AttributeModifier attributeModifier) {
         final ItemMeta itemMeta = this.getItemMeta();
-        if(itemMeta != null) {
+        if (itemMeta != null) {
             itemMeta.addAttributeModifier(attribute, attributeModifier);
             this.setItemMeta(itemMeta);
         }
@@ -175,6 +186,7 @@ public class ItemStackBuilder
 
     /**
      * 設定物品的標題名稱
+     *
      * @param title 名稱
      * @return 當前的建構器
      */
@@ -190,6 +202,7 @@ public class ItemStackBuilder
 
     /**
      * 設定物品的敘述說明
+     *
      * @param lore 敘述
      * @return 當前的建構器
      */
@@ -208,6 +221,7 @@ public class ItemStackBuilder
 
     /**
      * 對物品添加一些特殊標籤
+     *
      * @param itemFlag 標籤
      * @return 當前的建構器
      */
@@ -223,6 +237,7 @@ public class ItemStackBuilder
 
     /**
      * 對物品刪除特殊標籤
+     *
      * @param itemFlag 標籤
      * @return 當前的建構器
      */
@@ -238,6 +253,7 @@ public class ItemStackBuilder
 
     /**
      * 將頭顱的 SKIN 換成某位玩家的頭顱 (該物品必須為 PLAYER_HEAD 才可生效)
+     *
      * @param player 玩家
      * @return 當前的建構器
      */
@@ -252,15 +268,8 @@ public class ItemStackBuilder
     }
 
     /**
-     * 設定物品材質實例
-     * @param itemMeta 材質實例
-     */
-    protected final void setItemMeta(final @NotNull ItemMeta itemMeta) {
-        this.itemStack.setItemMeta(itemMeta);
-    }
-
-    /**
      * 獲取物品本身的材質實例
+     *
      * @return 材質實例
      */
     @Nullable
@@ -269,7 +278,17 @@ public class ItemStackBuilder
     }
 
     /**
+     * 設定物品材質實例
+     *
+     * @param itemMeta 材質實例
+     */
+    protected final void setItemMeta(final @NotNull ItemMeta itemMeta) {
+        this.itemStack.setItemMeta(itemMeta);
+    }
+
+    /**
      * 將物品建置出來
+     *
      * @return 物品
      */
     @NotNull
@@ -279,11 +298,13 @@ public class ItemStackBuilder
 
     /**
      * 將一些實用應用程序定義在該類別
+     *
      * @author UnikoHyperSpace
      */
     public static class Helper {
         /**
          * 使用反射呼叫 CraftItemStack.asNMSCopy(org.bukkit.inventory.ItemStack)
+         *
          * @param original 物品
          * @return net.minecraft.world.item.ItemStack
          */
@@ -297,7 +318,8 @@ public class ItemStackBuilder
 
         /**
          * 使用反射呼叫 CraftItemStack.asBukkitCopy(net.minecraft.world.item.ItemStack)
-         * @param  itemStack 物品
+         *
+         * @param itemStack 物品
          * @return org.bukkit.inventory.ItemStack
          */
         @NotNull

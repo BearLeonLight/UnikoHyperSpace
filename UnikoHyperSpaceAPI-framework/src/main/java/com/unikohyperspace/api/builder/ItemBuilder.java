@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.api.builder;
 
 import org.bukkit.Material;
@@ -16,6 +14,7 @@ import java.util.Map;
 
 /**
  * 代表一個物品的建構介面
+ *
  * @author UnikoHyperSpace
  */
 public interface ItemBuilder
@@ -23,6 +22,7 @@ public interface ItemBuilder
 
     /**
      * 設定物品類型
+     *
      * @param material 材質
      * @return 當前的建構器
      */
@@ -30,6 +30,7 @@ public interface ItemBuilder
 
     /**
      * 設定數量
+     *
      * @param amount 數量
      * @return 當前的建構器
      */
@@ -37,14 +38,16 @@ public interface ItemBuilder
 
     /**
      * 添加附魔
+     *
      * @param enchantment 附魔
-     * @param level 水平
+     * @param level       水平
      * @return 當前的建構器
      */
     @NotNull ItemBuilder enchantment(@NotNull Enchantment enchantment, int level);
 
     /**
      * 集體附魔
+     *
      * @param enchantments 附魔集合
      * @return 當前的建構器
      */
@@ -52,6 +55,7 @@ public interface ItemBuilder
 
     /**
      * 刪除一個附魔
+     *
      * @param enchantment 附魔
      * @return 當前的建構器
      */
@@ -59,6 +63,7 @@ public interface ItemBuilder
 
     /**
      * 設定本地化名稱
+     *
      * @param name 名稱
      * @return 當前的建構器
      */
@@ -66,6 +71,7 @@ public interface ItemBuilder
 
     /**
      * 物品是否為不可破壞
+     *
      * @param unbreakable 是或否
      * @return 當前的建構器
      */
@@ -73,6 +79,7 @@ public interface ItemBuilder
 
     /**
      * 沒有說明 (尚未之用途)
+     *
      * @param data ?
      * @return 當前的建構器
      */
@@ -80,7 +87,8 @@ public interface ItemBuilder
 
     /**
      * 沒有說明 (尚未之用途)
-     * @param attribute ?
+     *
+     * @param attribute         ?
      * @param attributeModifier ?
      * @return 當前的建構器
      */
@@ -88,6 +96,7 @@ public interface ItemBuilder
 
     /**
      * 設定物品的標題名稱
+     *
      * @param title 名稱
      * @return 當前的建構器
      */
@@ -95,6 +104,7 @@ public interface ItemBuilder
 
     /**
      * 設定物品的敘述說明
+     *
      * @param lore 敘述
      * @return 當前的建構器
      */
@@ -102,6 +112,7 @@ public interface ItemBuilder
 
     /**
      * 對物品添加一些特殊標籤
+     *
      * @param itemFlag 標籤
      * @return 當前的建構器
      */
@@ -109,6 +120,7 @@ public interface ItemBuilder
 
     /**
      * 對物品刪除特殊標籤
+     *
      * @param itemFlag 標籤
      * @return 當前的建構器
      */
@@ -116,6 +128,7 @@ public interface ItemBuilder
 
     /**
      * 將頭顱的 SKIN 換成某位玩家的頭顱 (該物品必須為 PLAYER_HEAD 才可生效)
+     *
      * @param player 玩家
      * @return 當前的建構器
      */

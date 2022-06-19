@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.api.inventory.button.components;
 
 import org.bukkit.Material;
@@ -7,6 +5,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 代表容器中的內容項目
+ *
  * @author UnikoHyperSpace
  */
 public class Content {
@@ -24,8 +23,9 @@ public class Content {
 
     /**
      * 建構子
-     * @param icon           圖示
-     * @param message        內容訊息
+     *
+     * @param icon    圖示
+     * @param message 內容訊息
      */
     public Content(final @NotNull Material icon, final @NotNull String message) {
         this.icon = icon;
@@ -34,6 +34,7 @@ public class Content {
 
     /**
      * 獲取顯示圖標
+     *
      * @return 圖標
      */
     @NotNull
@@ -43,6 +44,7 @@ public class Content {
 
     /**
      * 獲取顯示訊息
+     *
      * @return 訊息
      */
     @NotNull
@@ -52,6 +54,7 @@ public class Content {
 
     /**
      * 獲取當前選擇狀態
+     *
      * @return 狀態
      */
     public final boolean isSelected() {
@@ -60,6 +63,7 @@ public class Content {
 
     /**
      * 設定選擇狀態
+     *
      * @param state 狀態
      */
     public final void setSelected(final boolean state) {
@@ -68,6 +72,7 @@ public class Content {
 
     /**
      * 轉成字串型別
+     *
      * @return 訊息
      */
     @Override

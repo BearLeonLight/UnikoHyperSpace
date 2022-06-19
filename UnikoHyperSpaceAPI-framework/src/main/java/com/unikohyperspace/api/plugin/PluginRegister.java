@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.api.plugin;
 
 import org.jetbrains.annotations.NotNull;
@@ -11,6 +9,7 @@ import java.lang.annotation.Target;
 
 /**
  * 插件註冊動作示標符
+ *
  * @author UnikoHyperSpace
  */
 @Target(ElementType.METHOD)
@@ -29,6 +28,7 @@ public @interface PluginRegister {
 
     /**
      * 代表一個動作類型
+     *
      * @author UnikoHyperSpace
      */
     enum ActionType {
@@ -46,6 +46,7 @@ public @interface PluginRegister {
 
         /**
          * 建構子
+         *
          * @param id 操作類型ID
          */
         ActionType(long id) {
@@ -54,6 +55,7 @@ public @interface PluginRegister {
 
         /**
          * 獲取操作類型ID
+         *
          * @return ID
          */
         public final long getId() {
@@ -63,6 +65,7 @@ public @interface PluginRegister {
 
     /**
      * 代表一個動作的優先級別
+     *
      * @author UnikoHyperSpace
      */
     enum ActionPriority {
@@ -82,6 +85,7 @@ public @interface PluginRegister {
 
         /**
          * 建構子
+         *
          * @param priority 優先等級
          */
         ActionPriority(long priority) {
@@ -90,6 +94,7 @@ public @interface PluginRegister {
 
         /**
          * 獲取優先級
+         *
          * @return 優先級
          */
         public final long getPriority() {

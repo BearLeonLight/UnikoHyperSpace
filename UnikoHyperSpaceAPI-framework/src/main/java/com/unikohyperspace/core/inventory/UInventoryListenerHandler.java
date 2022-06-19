@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.inventory;
 
 import com.unikohyperspace.api.inventory.button.Button;
@@ -20,6 +18,7 @@ import java.util.*;
 
 /**
  * 代表使用者介面處理程序
+ *
  * @author UnikoHyperSpace
  */
 public final class UInventoryListenerHandler
@@ -39,6 +38,7 @@ public final class UInventoryListenerHandler
 
     /**
      * 建構子
+     *
      * @param gui 處理介面
      */
     public UInventoryListenerHandler(final @NotNull GUI gui) {
@@ -52,6 +52,7 @@ public final class UInventoryListenerHandler
 
     /**
      * 運行事件方法
+     *
      * @param event 事件實例
      */
     public void executeListener(final @NotNull InventoryEvent event) {
@@ -70,6 +71,7 @@ public final class UInventoryListenerHandler
 
     /**
      * 處理按鈕事件
+     *
      * @param event 事件
      * @return 是否已經運行過按鈕
      */
@@ -99,6 +101,7 @@ public final class UInventoryListenerHandler
 
     /**
      * 排序一個插件註冊動作的所有方法(優先等級)
+     *
      * @param eventClass 事件類
      */
     private void sortedListener(final @NotNull Class<? extends InventoryEvent> eventClass) {
@@ -125,6 +128,7 @@ public final class UInventoryListenerHandler
 
     /**
      * 註冊點擊按鈕
+     *
      * @param buttons 按鈕
      */
     public void registerButton(final @NotNull Button... buttons) {
@@ -134,6 +138,7 @@ public final class UInventoryListenerHandler
 
     /**
      * 獲取正在處理的介面
+     *
      * @return 介面
      */
     @NotNull
@@ -143,11 +148,13 @@ public final class UInventoryListenerHandler
 
     /**
      * 定義一些介面處理操作
+     *
      * @author UnikoHyperSpace
      */
     public static class Helper {
         /**
          * 判斷介面是否為同步觸發
+         *
          * @param gui 介面
          * @return 是否同步
          */
@@ -162,7 +169,8 @@ public final class UInventoryListenerHandler
 
         /**
          * 該事件在介面是否被強制取消
-         * @param gui 介面
+         *
+         * @param gui        介面
          * @param eventClass 事件類
          * @return 是否被取消
          */

@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.api.inventory.button;
 
 import com.unikohyperspace.api.inventory.button.event.ClickButtonEvent;
@@ -10,6 +8,7 @@ import java.util.Collection;
 
 /**
  * 代表一個可點擊的按鈕
+ *
  * @author UnikoHyperSpace
  */
 public interface ClickButton
@@ -17,6 +16,7 @@ public interface ClickButton
 
     /**
      * 當被點擊時調用
+     *
      * @param event 點擊事件
      */
     void executeButtonClick(@NotNull ClickButtonEvent event);

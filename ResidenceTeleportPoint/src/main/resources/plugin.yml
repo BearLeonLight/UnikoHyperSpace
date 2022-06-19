@@ -1,18 +1,18 @@
-  name: ResidenceTeleportPoint
-  main: com.unikohyperspace.residenceteleportpoint.ResidenceTeleportPoint
-  version: 1.0
-  depend:
-    - UnikoHyperSpaceAPI
-    - Residence
-  commands:
-    ResidenceTeleportPoint:
-      description: "該插件的主要命令。"
-      aliases: [ rtp ]
-      permission: "ResidenceTeleportPoint.use"
-  permissions:
-    ResidenceTeleportPoint.use:
-      description: "允許使用ResidenceTeleportPoint"
-      default: op
-    ResidenceTeleportPoint.test:
-      description: "允許使用ResidenceTeleportPoint test"
-      default: op
+name: ResidenceTeleportPoint
+main: com.unikohyperspace.residenceteleportpoint.ResidenceTeleportPoint
+version: 1.0
+depend:
+  - UnikoHyperSpaceAPI
+  - Residence
+commands:
+  ResidenceTeleportPoint:
+    description: "該插件的主要命令。"
+    aliases: [ rtp ]
+    permission: "ResidenceTeleportPoint.use"
+permissions:
+  ResidenceTeleportPoint.use:
+    description: "允許使用ResidenceTeleportPoint"
+    default: op
+  ResidenceTeleportPoint.test:
+    description: "允許使用ResidenceTeleportPoint test"
+    default: op

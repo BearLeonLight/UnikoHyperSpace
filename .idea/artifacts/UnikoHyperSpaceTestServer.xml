@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact name="UnikoHyperSpaceTestServer">
-    <output-path>$PROJECT_DIR$/../../TestServer/plugins</output-path>
+    <output-path>$PROJECT_DIR$/../TestServer/plugins</output-path>
     <root id="root">
       <element id="artifact" artifact-name="UnikoHyperSpaceAPI" />
       <element id="artifact" artifact-name="ResidenceTeleportPoint" />

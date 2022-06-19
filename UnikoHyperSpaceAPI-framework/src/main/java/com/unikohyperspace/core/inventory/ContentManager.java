@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.inventory;
 
 import com.unikohyperspace.api.inventory.button.components.Content;
@@ -11,6 +9,7 @@ import java.util.*;
 
 /**
  * 代表一個容器管理器實作類
+ *
  * @author UnikoHyperSpace
  */
 public final class ContentManager
@@ -25,6 +24,7 @@ public final class ContentManager
 
     /**
      * 添加一個內容至清單
+     *
      * @param contents 內容
      */
     public void addContents(final @NotNull Content... contents) {
@@ -76,6 +76,7 @@ public final class ContentManager
 
     /**
      * 獲取當前選取的項目ID
+     *
      * @return ID
      */
     public int getSelectedIndex() {
@@ -84,17 +85,21 @@ public final class ContentManager
 
     /**
      * 獲取當前選取的項目
+     *
      * @return 項目
      */
     @Nullable
     public Content getSelected() {
         try {
             return this.contents.get(this.selectedItemIndex);
-        } catch (final IndexOutOfBoundsException e) { return null; }
+        } catch (final IndexOutOfBoundsException e) {
+            return null;
+        }
     }
 
     /**
      * 獲取一個指定的內容
+     *
      * @param index 位置
      * @return 內容
      */
@@ -105,6 +110,7 @@ public final class ContentManager
 
     /**
      * 獲取所有容器中的內容
+     *
      * @return 內容清單
      */
     @NotNull

@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.manager;
 
 import com.unikohyperspace.api.manager.Manager;
@@ -12,6 +10,7 @@ import java.util.Map;
 
 /**
  * 代表一個管理器基礎類別
+ *
  * @param <K> 任何類型
  * @param <V> 任何類型
  */
@@ -23,6 +22,7 @@ public abstract class ManagerAbstract<K, V>
 
     /**
      * 添加資料到管理器中
+     *
      * @param key   k
      * @param value v
      */
@@ -32,6 +32,7 @@ public abstract class ManagerAbstract<K, V>
 
     /**
      * 從管理器中刪除資料
+     *
      * @param key k
      */
     public void remove(final @NotNull K key) {
@@ -40,6 +41,7 @@ public abstract class ManagerAbstract<K, V>
 
     /**
      * 從管理器中獲取資料
+     *
      * @param key k
      * @return v
      */
@@ -50,6 +52,7 @@ public abstract class ManagerAbstract<K, V>
 
     /**
      * 檢查該管理器中是否有資料
+     *
      * @param key k
      * @return v
      */
@@ -59,6 +62,7 @@ public abstract class ManagerAbstract<K, V>
 
     /**
      * 獲取管理器中所有的 value
+     *
      * @return 集合
      */
     @NotNull

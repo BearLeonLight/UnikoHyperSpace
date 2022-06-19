@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.inventory;
 
 import com.unikohyperspace.Utils;
@@ -17,6 +15,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 代表一個使用者介面類別
+ *
  * @author UnikoHyperSpace
  */
 public abstract class UInventoryAbstract
@@ -40,8 +39,9 @@ public abstract class UInventoryAbstract
 
     /**
      * 建構子
+     *
      * @param title 介面標題
-     * @param size 介面大小
+     * @param size  介面大小
      */
     public UInventoryAbstract(final @NotNull String title, final @NotNull InventorySize size) {
         this.inventory_title = Utils.forMessageToRGB(title);
@@ -51,6 +51,7 @@ public abstract class UInventoryAbstract
 
     /**
      * 獲取介面大小
+     *
      * @return 大小
      */
     @NotNull
@@ -60,6 +61,7 @@ public abstract class UInventoryAbstract
 
     /**
      * 獲取介面標題
+     *
      * @return 標題
      */
     @NotNull
@@ -69,6 +71,7 @@ public abstract class UInventoryAbstract
 
     /**
      * Get the object's inventory.
+     *
      * @return The inventory.
      */
     @NotNull
@@ -78,6 +81,7 @@ public abstract class UInventoryAbstract
 
     /**
      * 獲取事件處理程序
+     *
      * @return 事件處理程序
      */
     @NotNull
@@ -87,6 +91,7 @@ public abstract class UInventoryAbstract
 
     /**
      * 繪製按鈕
+     *
      * @param buttons 按鈕
      */
     @NotNull
@@ -99,6 +104,7 @@ public abstract class UInventoryAbstract
 
     /**
      * 繪製物品
+     *
      * @param itemStacks 物品
      */
     @NotNull
@@ -119,16 +125,18 @@ public abstract class UInventoryAbstract
 
     /**
      * 對該介面註冊按鈕
+     *
      * @param buttons 按鈕
      */
     @NotNull
-    public final UInventoryAbstract addButtons(final @NotNull Button ... buttons) {
+    public final UInventoryAbstract addButtons(final @NotNull Button... buttons) {
         this.eventHandler.registerButton(buttons);
         return this;
     }
 
     /**
      * 開啟一個介面
+     *
      * @param player 玩家
      */
     @Override
@@ -139,6 +147,7 @@ public abstract class UInventoryAbstract
 
     /**
      * 初始化介面
+     *
      * @param player 玩家
      */
     protected abstract void initInventory(final @NotNull Player player);

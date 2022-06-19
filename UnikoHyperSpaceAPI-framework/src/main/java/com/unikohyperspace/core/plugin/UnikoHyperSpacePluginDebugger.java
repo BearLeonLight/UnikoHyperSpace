@@ -1,10 +1,8 @@
-
-
 package com.unikohyperspace.core.plugin;
 
 import com.unikohyperspace.Utils;
-import com.unikohyperspace.api.plugin.UnikoHyperSpacePlugin;
 import com.unikohyperspace.api.plugin.PluginDebugger;
+import com.unikohyperspace.api.plugin.UnikoHyperSpacePlugin;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.logging.Level;
@@ -12,6 +10,7 @@ import java.util.logging.Logger;
 
 /**
  * 代表一個插件紀錄器
+ *
  * @author UnikoHyperSpace
  */
 public final class UnikoHyperSpacePluginDebugger
@@ -27,6 +26,7 @@ public final class UnikoHyperSpacePluginDebugger
 
     /**
      * 建構子
+     *
      * @param plugin 插件
      */
     public UnikoHyperSpacePluginDebugger(final @NotNull UnikoHyperSpacePlugin plugin) {
@@ -36,6 +36,7 @@ public final class UnikoHyperSpacePluginDebugger
 
     /**
      * 紀錄資訊訊息
+     *
      * @param msg 訊息
      */
     public void info(final @NotNull String msg) {
@@ -44,6 +45,7 @@ public final class UnikoHyperSpacePluginDebugger
 
     /**
      * 紀錄警告訊息
+     *
      * @param msg 訊息
      */
     public void warning(final @NotNull String msg) {
@@ -52,8 +54,9 @@ public final class UnikoHyperSpacePluginDebugger
 
     /**
      * 紀錄訊息
+     *
      * @param level 級別
-     * @param msg 訊息
+     * @param msg   訊息
      */
     public void log(final @NotNull Level level, final @NotNull String msg) {
         this.logger.log(level, Utils.forMessageToRGB(msg));
@@ -61,6 +64,7 @@ public final class UnikoHyperSpacePluginDebugger
 
     /**
      * 獲取該紀錄器插件
+     *
      * @return 插件
      */
     @NotNull

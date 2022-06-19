@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.format;
 
 import com.unikohyperspace.api.builder.FormatBuilder;
@@ -7,6 +5,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 代表一個格式的建構抽象類
+ *
  * @param <T> 任何類型
  * @param <R> 任何類型
  * @author UnikoHyperSpace
@@ -24,8 +23,9 @@ public abstract class FormatBuilderAbstract<T, R>
 
     /**
      * 建構子
+     *
      * @param replaceObj 被轉換格式
-     * @param replacer 根據什麼物件轉換
+     * @param replacer   根據什麼物件轉換
      */
     public FormatBuilderAbstract(final @NotNull T replaceObj, final @NotNull R replacer) {
         this.replaceObj = replaceObj;
@@ -34,6 +34,7 @@ public abstract class FormatBuilderAbstract<T, R>
 
     /**
      * 建構出的對象實例
+     *
      * @return 建構格式
      */
     @NotNull
@@ -43,6 +44,7 @@ public abstract class FormatBuilderAbstract<T, R>
 
     /**
      * 轉換單一格式
+     *
      * @param replace  被轉換格式
      * @param replacer 根據什麼物件轉換
      * @return 轉換完成格式
@@ -52,6 +54,7 @@ public abstract class FormatBuilderAbstract<T, R>
 
     /**
      * 獲取被轉換的對象
+     *
      * @return 轉換之對象
      */
     @NotNull

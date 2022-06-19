@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.api.inventory.button.event;
 
 import com.unikohyperspace.api.inventory.button.Button;
@@ -10,12 +8,13 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 代表按鈕事件
+ *
  * @author UnikoHyperSpace
  */
-    public abstract class ButtonEvent<B extends Button> {
+public abstract class ButtonEvent<B extends Button> {
 
-        // 介面
-        @NotNull
+    // 介面
+    @NotNull
     private final GUI gui;
 
     // 玩家
@@ -32,9 +31,10 @@ import org.jetbrains.annotations.NotNull;
 
     /**
      * 建構子
-     * @param gui 介面
-     * @param player 玩家
-     * @param button 按鈕
+     *
+     * @param gui       介面
+     * @param player    玩家
+     * @param button    按鈕
      * @param clickType 點擊方法
      */
     public ButtonEvent(final @NotNull GUI gui,
@@ -49,6 +49,7 @@ import org.jetbrains.annotations.NotNull;
 
     /**
      * 獲取事件中的介面
+     *
      * @return 介面
      */
     @NotNull
@@ -58,6 +59,7 @@ import org.jetbrains.annotations.NotNull;
 
     /**
      * 獲取事件中的玩家
+     *
      * @return 玩家
      */
     @NotNull
@@ -67,6 +69,7 @@ import org.jetbrains.annotations.NotNull;
 
     /**
      * 獲取事件中的按鈕
+     *
      * @return 按鈕
      */
     @NotNull
@@ -76,6 +79,7 @@ import org.jetbrains.annotations.NotNull;
 
     /**
      * 獲取事件點擊方法
+     *
      * @return 點擊方法
      */
     @NotNull

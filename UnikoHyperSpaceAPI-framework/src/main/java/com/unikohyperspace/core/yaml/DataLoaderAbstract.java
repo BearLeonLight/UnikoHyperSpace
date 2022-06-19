@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.yaml;
 
 import com.unikohyperspace.api.plugin.UnikoHyperSpacePlugin;
@@ -8,6 +6,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 有關資料載入器相關介面
+ *
  * @author MouBoeCat
  */
 public abstract class DataLoaderAbstract
@@ -16,9 +15,10 @@ public abstract class DataLoaderAbstract
 
     /**
      * 建構子
-     * @param plugin    插件
-     * @param path      檔案路徑
-     * @param name      檔案
+     *
+     * @param plugin 插件
+     * @param path   檔案路徑
+     * @param name   檔案
      */
     public DataLoaderAbstract(final @NotNull UnikoHyperSpacePlugin plugin, final @NotNull String path, final @NotNull String name) {
         super(plugin, path, name, true);

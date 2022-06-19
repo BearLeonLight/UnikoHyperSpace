@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.nbttag;
 
 import com.unikohyperspace.api.builder.ItemNBTBuilder;
@@ -10,6 +8,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 代表一個物品對 NBTTag 的操作類
+ *
  * @author UnikoHyperSpace
  */
 public final class ItemStackNBTTagBuilder
@@ -18,7 +17,8 @@ public final class ItemStackNBTTagBuilder
 
     /**
      * 建構子
-     * @param builder 建構的對象
+     *
+     * @param builder     建構的對象
      * @param mainTagName 標籤主路徑
      */
     public ItemStackNBTTagBuilder(final @NotNull ItemStack builder, final @NotNull String mainTagName) {
@@ -26,19 +26,8 @@ public final class ItemStackNBTTagBuilder
     }
 
     /**
-     * 建構出的對象實例
-     * @return 建構對象
-     */
-    @NotNull
-    public ItemStack build() {
-        final CompoundTag tag = ItemStackNBTTagBuilder.Helper.getNBTTag(this.builder);
-        // 將當前的配置寫入物品Tag
-        tag.put(this.mainTagName, this.compound);
-        return Helper.setNBTTag(this.builder, tag);
-    }
-
-    /**
      * 在一個物品上解析 tag 類型 boolean
+     *
      * @param var1 物品
      * @param var2 主路徑
      * @param var3 路徑
@@ -55,6 +44,7 @@ public final class ItemStackNBTTagBuilder
 
     /**
      * 在一個物品上解析 tag 類型 byte
+     *
      * @param var1 物品
      * @param var2 主路徑
      * @param var3 路徑
@@ -71,6 +61,7 @@ public final class ItemStackNBTTagBuilder
 
     /**
      * 在一個物品上解析 tag 類型 double
+     *
      * @param var1 物品
      * @param var2 主路徑
      * @param var3 路徑
@@ -87,6 +78,7 @@ public final class ItemStackNBTTagBuilder
 
     /**
      * 在一個物品上解析 tag 類型 float
+     *
      * @param var1 物品
      * @param var2 主路徑
      * @param var3 路徑
@@ -103,6 +95,7 @@ public final class ItemStackNBTTagBuilder
 
     /**
      * 在一個物品上解析 tag 類型 int
+     *
      * @param var1 物品
      * @param var2 主路徑
      * @param var3 路徑
@@ -119,6 +112,7 @@ public final class ItemStackNBTTagBuilder
 
     /**
      * 在一個物品上解析 tag 類型 long
+     *
      * @param var1 物品
      * @param var2 主路徑
      * @param var3 路徑
@@ -135,6 +129,7 @@ public final class ItemStackNBTTagBuilder
 
     /**
      * 在一個物品上解析 tag 類型 short
+     *
      * @param var1 物品
      * @param var2 主路徑
      * @param var3 路徑
@@ -151,6 +146,7 @@ public final class ItemStackNBTTagBuilder
 
     /**
      * 在一個物品上解析 tag 類型 String
+     *
      * @param var1 物品
      * @param var2 主路徑
      * @param var3 路徑
@@ -168,6 +164,7 @@ public final class ItemStackNBTTagBuilder
 
     /**
      * 檢查是否包含一個路徑
+     *
      * @param var1 物品
      * @param var2 主路徑
      * @return 資料
@@ -178,12 +175,27 @@ public final class ItemStackNBTTagBuilder
     }
 
     /**
+     * 建構出的對象實例
+     *
+     * @return 建構對象
+     */
+    @NotNull
+    public ItemStack build() {
+        final CompoundTag tag = ItemStackNBTTagBuilder.Helper.getNBTTag(this.builder);
+        // 將當前的配置寫入物品Tag
+        tag.put(this.mainTagName, this.compound);
+        return Helper.setNBTTag(this.builder, tag);
+    }
+
+    /**
      * 將一些實用應用程序定義在該類別
+     *
      * @author UnikoHyperSpace
      */
     public static class Helper {
         /**
          * 獲取該物品上記錄的NBTTag
+         *
          * @param original 物品
          * @return NBTTag
          */
@@ -196,6 +208,7 @@ public final class ItemStackNBTTagBuilder
 
         /**
          * 將 NBTTag 寫入至物品
+         *
          * @param original 物品
          * @param compound NBTTag
          * @return 新物品

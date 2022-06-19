@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.api.inventory.gui;
 
 import org.jetbrains.annotations.NotNull;
@@ -11,6 +9,7 @@ import java.lang.annotation.Target;
 
 /**
  * 代表使用者介面處理程序註冊器
+ *
  * @author UnikoHyperSpace
  */
 @Target(ElementType.METHOD)
@@ -23,6 +22,7 @@ public @interface GUIRegister {
 
     /**
      * 代表一個事件的優先級別
+     *
      * @author UnikoHyperSpace
      */
     enum EventPriority {
@@ -42,6 +42,7 @@ public @interface GUIRegister {
 
         /**
          * 建構子
+         *
          * @param priority 優先等級
          */
         EventPriority(long priority) {
@@ -50,6 +51,7 @@ public @interface GUIRegister {
 
         /**
          * 獲取優先級
+         *
          * @return 優先級
          */
         public final long getPriority() {

@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.yaml;
 
 import com.unikohyperspace.api.plugin.UnikoHyperSpacePlugin;
@@ -11,6 +9,7 @@ import java.io.File;
 
 /**
  * 一個載入檔案最底層的類別
+ *
  * @author UnikoHyperSpace
  */
 public abstract class MemoryLoaderAbstract
@@ -28,8 +27,9 @@ public abstract class MemoryLoaderAbstract
 
     /**
      * 建構子
+     *
      * @param plugin 插件
-     * @param path 路徑
+     * @param path   路徑
      */
     public MemoryLoaderAbstract(final @NotNull UnikoHyperSpacePlugin plugin, final @NotNull String path) {
         this.plugin = plugin;
@@ -40,11 +40,12 @@ public abstract class MemoryLoaderAbstract
 
     /**
      * 創建路徑
+     *
      * @param path 檔案路徑
      * @return 是否成功創建
      */
     protected final boolean createPath(final @NotNull File path) {
-        if(!path.exists())
+        if (!path.exists())
             return path.mkdirs();
 
         return true;
@@ -52,6 +53,7 @@ public abstract class MemoryLoaderAbstract
 
     /**
      * 獲取檔案實例
+     *
      * @return 檔案
      */
     @NotNull
@@ -61,6 +63,7 @@ public abstract class MemoryLoaderAbstract
 
     /**
      * 獲取YAML實例
+     *
      * @return YAML
      */
     @NotNull
@@ -70,6 +73,7 @@ public abstract class MemoryLoaderAbstract
 
     /**
      * 獲取檔案所屬插件
+     *
      * @return 插件
      */
     @NotNull

@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.inventory;
 
 import com.unikohyperspace.api.builder.ItemNBTBuilder;
@@ -16,6 +14,7 @@ import java.util.UUID;
 
 /**
  * 代表一個介面按鈕類別
+ *
  * @author UnikoHyperSpace
  */
 public abstract class ButtonBuilder
@@ -41,8 +40,9 @@ public abstract class ButtonBuilder
 
     /**
      * 建構子
+     *
      * @param material 材質
-     * @param slot 介面位置
+     * @param slot     介面位置
      */
     public ButtonBuilder(final @NotNull GUI gui, final @NotNull Material material, final int slot) {
         this(gui, material, 1, slot);
@@ -50,9 +50,10 @@ public abstract class ButtonBuilder
 
     /**
      * 建構子
+     *
      * @param material 材質
-     * @param amount 數量
-     * @param slot 介面位置
+     * @param amount   數量
+     * @param slot     介面位置
      */
     public ButtonBuilder(final @NotNull GUI gui, final @NotNull Material material, final int amount, final int slot) {
         this(gui, new ItemStack(material, amount), slot);
@@ -60,8 +61,9 @@ public abstract class ButtonBuilder
 
     /**
      * 建構子
+     *
      * @param itemStack 物品實例
-     * @param slot 介面位置
+     * @param slot      介面位置
      */
     public ButtonBuilder(final @NotNull GUI gui, final @NotNull ItemStack itemStack, final int slot) {
         super(itemStack);
@@ -71,7 +73,25 @@ public abstract class ButtonBuilder
     }
 
     /**
+     * 獲取按鈕UUID
+     *
+     * @param itemStack 物品
+     * @return UUID
+     */
+    @Nullable
+    public static UUID getButtonId(final @Nullable ItemStack itemStack) {
+        if (itemStack == null)
+            return null;
+
+        final String uuidString =
+                ItemStackNBTTagBuilder.getString(itemStack, ButtonBuilder.MOU_BIE_API_BUTTON_TAG, ButtonBuilder.BUTTON_UUID);
+
+        return uuidString.length() == 36 ? UUID.fromString(uuidString) : null;
+    }
+
+    /**
      * 獲取屬於按鈕的介面
+     *
      * @return 介面
      */
     @NotNull
@@ -81,6 +101,7 @@ public abstract class ButtonBuilder
 
     /**
      * 獲取按鈕UUID
+     *
      * @return UUID
      */
     @NotNull
@@ -90,6 +111,7 @@ public abstract class ButtonBuilder
 
     /**
      * 獲取物品在介面上的位置
+     *
      * @return 位置
      */
     public final int getButtonSlot() {
@@ -103,6 +125,7 @@ public abstract class ButtonBuilder
 
     /**
      * 建構函數
+     *
      * @return 對象
      */
     @Override
@@ -115,22 +138,6 @@ public abstract class ButtonBuilder
                 .build();
 
         return super.build();
-    }
-
-    /**
-     * 獲取按鈕UUID
-     * @param itemStack 物品
-     * @return UUID
-     */
-    @Nullable
-    public static UUID getButtonId(final @Nullable ItemStack itemStack) {
-        if (itemStack == null)
-            return null;
-
-        final String uuidString =
-                ItemStackNBTTagBuilder.getString(itemStack, ButtonBuilder.MOU_BIE_API_BUTTON_TAG, ButtonBuilder.BUTTON_UUID);
-
-        return uuidString.length() == 36 ? UUID.fromString(uuidString) : null;
     }
 
 }

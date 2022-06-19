@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace;
 
 import com.unikohyperspace.api.plugin.UnikoHyperSpacePlugin;
@@ -17,12 +15,14 @@ import java.util.regex.Pattern;
 
 /**
  * 將一些實用應用程序定義在該類別
+ *
  * @author UnikoHyperSpace
  */
 public final class Utils {
 
     /**
      * 將字串RGB解析成RGB物件
+     *
      * @param msg 十六進位RGB字串 (<#FF0000> Hello world !)
      * @return RGB字串
      */
@@ -43,15 +43,16 @@ public final class Utils {
 
     /**
      * 獲取Uniko插件集合
+     *
      * @return 插件集合
      */
     @NotNull
-    public static List<UnikoHyperSpacePlugin> getMouBiePlugins() {
+    public static List<UnikoHyperSpacePlugin> getUnikoHyperSpacePlugins() {
         final List<UnikoHyperSpacePlugin> plugins = new ArrayList<>();
 
         for (final Plugin plugin : Bukkit.getPluginManager().getPlugins()) {
-            if (plugin instanceof UnikoHyperSpacePlugin unikoHyperSpacePlugin)
-                plugins.add(unikoHyperSpacePlugin);
+            if (plugin instanceof UnikoHyperSpacePlugin UnikoHyperSpacePlugin)
+                plugins.add(UnikoHyperSpacePlugin);
         }
 
         return plugins;
@@ -59,12 +60,13 @@ public final class Utils {
 
     /**
      * 獲取Uniko插件
+     *
      * @param name 插件名稱
      * @return Uniko插件
      */
     @Nullable
     public static UnikoHyperSpacePlugin getUnikoHyperSpacePlugin(@NotNull String name) {
-        final List<UnikoHyperSpacePlugin> plugins = Utils.getMouBiePlugins();
+        final List<UnikoHyperSpacePlugin> plugins = Utils.getUnikoHyperSpacePlugins();
 
         for (final UnikoHyperSpacePlugin plugin : plugins) {
             if (plugin.getName().equalsIgnoreCase(name))
@@ -76,6 +78,7 @@ public final class Utils {
 
     /**
      * 重載Uniko的插件
+     *
      * @param name 插件名稱
      * @return 是否成功重載
      */
@@ -91,8 +94,9 @@ public final class Utils {
 
     /**
      * 呼叫事件並且返回事件呼叫結果
+     *
      * @param event 事件
-     * @param <T> 事件類
+     * @param <T>   事件類
      * @return 事件呼叫結果
      */
     @NotNull

@@ -1,9 +1,8 @@
-
-
 package com.unikohyperspace.api.plugin;
 
 /**
  * 用於將Uniko插件加載的載入器
+ *
  * @author UnikoHyperSpace
  */
 public interface PluginLoader {

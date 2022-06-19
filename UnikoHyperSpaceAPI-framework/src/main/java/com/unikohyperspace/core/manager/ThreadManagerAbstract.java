@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.manager;
 
 import com.unikohyperspace.api.manager.ThreadManager;
@@ -8,6 +6,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 用於紀錄相關線程的管理器介面
+ *
  * @param <P> 玩家類型
  * @param <T> 任何類型
  * @author UnikoHyperSpace
@@ -18,6 +17,7 @@ public abstract class ThreadManagerAbstract<P, T extends BukkitRunnable>
 
     /**
      * 添加資料到管理器中
+     *
      * @param key   k
      * @param value v
      */
@@ -29,6 +29,7 @@ public abstract class ThreadManagerAbstract<P, T extends BukkitRunnable>
 
     /**
      * 從管理器中刪除資料
+     *
      * @param key k
      */
     @Override

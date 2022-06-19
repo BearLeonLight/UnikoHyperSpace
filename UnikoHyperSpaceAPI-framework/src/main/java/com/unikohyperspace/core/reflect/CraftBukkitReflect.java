@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.reflect;
 
 import org.bukkit.Bukkit;
@@ -7,6 +5,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 加強針對 CraftBukkit 的反射機制
+ *
  * @author UnikoHyperSpace
  */
 public class CraftBukkitReflect
@@ -22,6 +21,7 @@ public class CraftBukkitReflect
 
     /**
      * 獲取 CraftBukkit 下的一個類
+     *
      * @param path org.bukkit.craftbukkit.version.路徑
      * @return 類
      */

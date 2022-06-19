@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.nbttag;
 
 import com.unikohyperspace.api.builder.NBTBuilder;
@@ -8,6 +6,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 代表一個 NBTTag 建構介面
+ *
  * @param <T> 具有NBTTag的對象類
  * @author UnikoHyperSpace
  */
@@ -28,9 +27,10 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 建構子
-     * @param builder 建構的對象
+     *
+     * @param builder     建構的對象
      * @param mainTagName 標籤主路徑
-     * @param tag 標籤
+     * @param tag         標籤
      */
     public NBTTagBuilder(final @NotNull T builder, final @NotNull String mainTagName, final @NotNull CompoundTag tag) {
         this.builder = builder;
@@ -40,6 +40,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 獲取當前的主路徑名稱
+     *
      * @return 名稱
      */
     @NotNull
@@ -49,6 +50,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 獲取NBTag物件
+     *
      * @return NBTag
      */
     @NotNull
@@ -58,6 +60,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上設置一個 boolean
+     *
      * @param var1 路徑
      * @param var2 資料
      * @return 當前的建構器
@@ -70,6 +73,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上設置一個 byte
+     *
      * @param var1 路徑
      * @param var2 資料
      * @return 當前的建構器
@@ -82,6 +86,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上設置一個 double
+     *
      * @param var1 路徑
      * @param var2 資料
      * @return 當前的建構器
@@ -94,6 +99,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上設置一個 float
+     *
      * @param var1 路徑
      * @param var2 資料
      * @return 當前的建構器
@@ -106,6 +112,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上設置一個 int
+     *
      * @param var1 路徑
      * @param var2 資料
      * @return 當前的建構器
@@ -118,6 +125,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上設置一個 long
+     *
      * @param var1 路徑
      * @param var2 資料
      * @return 當前的建構器
@@ -130,6 +138,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上設置一個 short
+     *
      * @param var1 路徑
      * @param var2 資料
      * @return 當前的建構器
@@ -142,6 +151,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上設置一個 String
+     *
      * @param var1 路徑
      * @param var2 資料
      * @return 當前的建構器
@@ -154,6 +164,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上或取一個 boolean
+     *
      * @param var1 路徑
      * @return 資料
      */
@@ -163,6 +174,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上或取一個 byte
+     *
      * @param var1 路徑
      * @return 資料
      */
@@ -172,6 +184,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上或取一個 double
+     *
      * @param var1 路徑
      * @return 資料
      */
@@ -181,6 +194,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上或取一個 float
+     *
      * @param var1 路徑
      * @return 資料
      */
@@ -190,6 +204,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上或取一個 int
+     *
      * @param var1 路徑
      * @return 資料
      */
@@ -199,6 +214,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上或取一個 long
+     *
      * @param var1 路徑
      * @return 資料
      */
@@ -208,6 +224,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上或取一個 short
+     *
      * @param var1 路徑
      * @return 資料
      */
@@ -217,6 +234,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 在該 tag 上或取一個 String
+     *
      * @param var1 路徑
      * @return 資料
      */
@@ -227,6 +245,7 @@ public abstract class NBTTagBuilder<T>
 
     /**
      * 檢查是否包含一個路徑
+     *
      * @param var1 路徑
      * @return 資料
      */

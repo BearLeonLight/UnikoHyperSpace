@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.manager;
 
 import com.unikohyperspace.api.manager.DataManager;
@@ -9,6 +7,7 @@ import org.jetbrains.annotations.Nullable;
 
 /**
  * 代表一個資料管理器基礎類別
+ *
  * @param <P> 任何類型
  * @param <D> 資料類型
  * @author UnikoHyperSpace
@@ -19,6 +18,7 @@ public abstract class DataManagerAbstract<P, D extends DataLoader>
 
     /**
      * 添加資料到管理器中
+     *
      * @param key   k
      * @param value v
      */
@@ -30,6 +30,7 @@ public abstract class DataManagerAbstract<P, D extends DataLoader>
 
     /**
      * 從管理器中刪除資料
+     *
      * @param key k
      */
     @Override

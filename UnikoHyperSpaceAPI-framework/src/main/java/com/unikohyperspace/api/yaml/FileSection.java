@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.api.yaml;
 
 import org.jetbrains.annotations.NotNull;
@@ -8,6 +6,7 @@ import java.io.File;
 
 /**
  * 有關於檔案的IO方法介面
+ *
  * @author UnikoHyperSpace
  */
 public interface FileSection
@@ -20,6 +19,7 @@ public interface FileSection
 
     /**
      * 將特定檔案載入
+     *
      * @param file 檔案
      */
     void load(@NotNull File file);
@@ -31,6 +31,7 @@ public interface FileSection
 
     /**
      * 保存至指定實體檔案
+     *
      * @param file 實體檔案
      */
     void save(@NotNull File file);

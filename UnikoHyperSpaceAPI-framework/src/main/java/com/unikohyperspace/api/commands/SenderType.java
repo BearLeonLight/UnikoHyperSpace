@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.api.commands;
 
 import org.jetbrains.annotations.NotNull;
@@ -7,6 +5,7 @@ import org.jetbrains.annotations.Nullable;
 
 /**
  * 代表一個指令發送者類型
+ *
  * @author UnikoHyperSpace
  */
 public enum SenderType {
@@ -24,7 +23,7 @@ public enum SenderType {
     private static final String CONSOLE_SENDER_NAME = "控制台";
 
     private static final long BLOCK_SENDER_ID = 2;
-    private static final String BLOCK_SENDER_NAME= "指令方塊";
+    private static final String BLOCK_SENDER_NAME = "指令方塊";
 
     private static final long PLAYER_SENDER_ID = 3;
     private static final String PLAYER_SENDER_NAME = "玩家";
@@ -37,7 +36,8 @@ public enum SenderType {
 
     /**
      * 建構子
-     * @param id 指令發送類型ID
+     *
+     * @param id   指令發送類型ID
      * @param name 指令發送類型名
      */
     SenderType(long id, @NotNull String name) {
@@ -45,24 +45,8 @@ public enum SenderType {
     }
 
     /**
-     * 獲取指令發送類型ID
-     * @return 類型ID
-     */
-    public final long getId() {
-        return this.info.id();
-    }
-
-    /**
-     * 獲取指令發送類型名
-     * @return 類型名
-     */
-    @NotNull
-    public final String getName() {
-        return this.info.name();
-    }
-
-    /**
      * 根據ID查找一個發送者類型
+     *
      * @param id 發送者ID
      * @return 發送者類型
      */
@@ -77,6 +61,7 @@ public enum SenderType {
 
     /**
      * 根據名稱查找一個發送者類型
+     *
      * @param name 發送者ID
      * @return 發送者類型
      */
@@ -89,10 +74,29 @@ public enum SenderType {
         return null;
     }
 
+    /**
+     * 獲取指令發送類型ID
+     *
+     * @return 類型ID
+     */
+    public final long getId() {
+        return this.info.id();
+    }
+
+    /**
+     * 獲取指令發送類型名
+     *
+     * @return 類型名
+     */
+    @NotNull
+    public final String getName() {
+        return this.info.name();
+    }
 
     /**
      * 有關發送者資訊
-     * @param id 指令發送者ID
+     *
+     * @param id   指令發送者ID
      * @param name 指令發送者名稱
      * @author UnikoHyperSpace
      */
@@ -100,6 +104,7 @@ public enum SenderType {
 
         /**
          * 建構子
+         *
          * @param id   指令發送類型ID
          * @param name 指令發送類型名
          */

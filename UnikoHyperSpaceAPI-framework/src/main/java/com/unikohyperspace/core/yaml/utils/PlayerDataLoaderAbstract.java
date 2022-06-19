@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.yaml.utils;
 
 import com.unikohyperspace.api.plugin.UnikoHyperSpacePlugin;
@@ -10,6 +8,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 代表一個玩家的資料基礎載入器
+ *
  * @author UnikoHyperSpace
  */
 public abstract class PlayerDataLoaderAbstract<P extends OfflinePlayer>
@@ -22,9 +21,10 @@ public abstract class PlayerDataLoaderAbstract<P extends OfflinePlayer>
 
     /**
      * 建構子
-     * @param plugin    插件
-     * @param path      檔案路徑
-     * @param player    玩家
+     *
+     * @param plugin 插件
+     * @param path   檔案路徑
+     * @param player 玩家
      */
     public PlayerDataLoaderAbstract(final @NotNull UnikoHyperSpacePlugin plugin, final @NotNull String path, final @NotNull P player) {
         super(plugin, path, player.getUniqueId() + ".yml");
@@ -34,6 +34,7 @@ public abstract class PlayerDataLoaderAbstract<P extends OfflinePlayer>
 
     /**
      * 獲取該資料載入器的玩家
+     *
      * @return 玩家
      */
     @NotNull
@@ -43,6 +44,7 @@ public abstract class PlayerDataLoaderAbstract<P extends OfflinePlayer>
 
     /**
      * 初始化相關動作
+     *
      * @param owner 紀錄擁有者
      */
     protected abstract void initPlayerLoader(final @NotNull P owner);

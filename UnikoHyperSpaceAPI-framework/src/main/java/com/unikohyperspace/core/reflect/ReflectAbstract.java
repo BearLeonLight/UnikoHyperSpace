@@ -1,4 +1,3 @@
-
 package com.unikohyperspace.core.reflect;
 
 import org.jetbrains.annotations.NotNull;
@@ -17,6 +16,7 @@ abstract class ReflectAbstract {
 
     /**
      * 根據路徑獲取一個 Class 類
+     *
      * @param path 路徑
      * @return 類
      */
@@ -32,6 +32,7 @@ abstract class ReflectAbstract {
 
     /**
      * 根據一個 Class 類獲取類的一個屬性
+     *
      * @param clazz     類
      * @param fieldName 屬性名稱
      * @return 類屬性
@@ -48,6 +49,7 @@ abstract class ReflectAbstract {
 
     /**
      * 根據一個屬性獲取一個對想屬性實例
+     *
      * @param field  屬性
      * @param object 獲取對象
      * @return 對象屬性實例
@@ -67,6 +69,7 @@ abstract class ReflectAbstract {
 
     /**
      * 根據一個 Class 類獲取類的一個方法
+     *
      * @param clazz      類
      * @param methodName 方法名稱
      * @param argsClass  方法參數對照表
@@ -84,6 +87,7 @@ abstract class ReflectAbstract {
 
     /**
      * 調用一個類方法
+     *
      * @param method      類方法
      * @param privateCall 是否強制繞過調用訪問
      * @param obj         在哪個實例上調用

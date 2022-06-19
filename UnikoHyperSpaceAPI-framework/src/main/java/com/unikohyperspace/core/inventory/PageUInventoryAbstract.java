@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.core.inventory;
 
 import com.unikohyperspace.api.inventory.gui.InventorySize;
@@ -9,6 +7,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 代表一個帶有頁數介面的類別
+ *
  * @author UnikoHyperSpace
  */
 public abstract class PageUInventoryAbstract
@@ -20,6 +19,7 @@ public abstract class PageUInventoryAbstract
 
     /**
      * 建構子
+     *
      * @param title 介面標題
      * @param size  介面大小
      */
@@ -29,6 +29,7 @@ public abstract class PageUInventoryAbstract
 
     /**
      * 初始化介面介面
+     *
      * @param player 玩家
      */
     @Override
@@ -38,13 +39,15 @@ public abstract class PageUInventoryAbstract
 
     /**
      * 初始化介面頁數介面
+     *
      * @param player 玩家
-     * @param page 頁數
+     * @param page   頁數
      */
     protected abstract void initPageInventory(final @NotNull Player player, final int page);
 
     /**
      * 開啟一個介面
+     *
      * @param player 玩家
      */
     @Override
@@ -54,6 +57,7 @@ public abstract class PageUInventoryAbstract
 
     /**
      * 開啟一個介面的頁數
+     *
      * @param player 玩家
      * @param page   頁數
      */

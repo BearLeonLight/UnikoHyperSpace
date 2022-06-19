@@ -1,5 +1,3 @@
-
-
 package com.unikohyperspace.api.event;
 
 import com.unikohyperspace.api.plugin.UnikoHyperSpacePlugin;
@@ -8,6 +6,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * 代表插件啟動事件
+ *
  * @author UnikoHyperSpace
  */
 public final class UnikoHyperSpacePluginEnableEvent
@@ -18,6 +17,7 @@ public final class UnikoHyperSpacePluginEnableEvent
 
     /**
      * 建構子
+     *
      * @param plugin 插件
      */
     public UnikoHyperSpacePluginEnableEvent(@NotNull UnikoHyperSpacePlugin plugin) {
@@ -25,12 +25,12 @@ public final class UnikoHyperSpacePluginEnableEvent
     }
 
     @NotNull
-    public HandlerList getHandlers() {
+    public static HandlerList getHandlerList() {
         return UnikoHyperSpacePluginEnableEvent.handlers;
     }
 
     @NotNull
-    public static HandlerList getHandlerList() {
+    public HandlerList getHandlers() {
         return UnikoHyperSpacePluginEnableEvent.handlers;
     }
 }
