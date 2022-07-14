@@ -35,6 +35,7 @@ public abstract class MainCommand implements IMainCommand {
     }
 
 
+
     @Override
     public final @Nullable List<String> onTab(@NotNull CommandSender sender, @NotNull String[] args) {
         if (args.length > 0 && this.commandNods.exists(args[0])) {
@@ -61,13 +62,13 @@ public abstract class MainCommand implements IMainCommand {
     }
 
     @Override
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+    public final boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         return onCmd(sender, args);
     }
 
     @Nullable
     @Override
-    public List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+    public final List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         return onTab(sender, args);
     }
 

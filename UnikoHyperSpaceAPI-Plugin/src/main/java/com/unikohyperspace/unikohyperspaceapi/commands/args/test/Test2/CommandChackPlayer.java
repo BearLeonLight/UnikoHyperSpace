@@ -34,7 +34,6 @@ public class CommandChackPlayer extends SubCommand {
         if (args.length == getNextNode() + 1) {
             for (OfflinePlayer offlinePlayer : getPlugin().getServer().getOfflinePlayers()) {
                 list.add(offlinePlayer.getName());
-
             }
             list.addAll(getPlugin().getServer().getOnlinePlayers().stream().map(Player::getName).toList());
         }

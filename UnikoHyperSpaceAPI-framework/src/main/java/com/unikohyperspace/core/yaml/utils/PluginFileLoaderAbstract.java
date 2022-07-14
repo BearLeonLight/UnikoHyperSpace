@@ -23,6 +23,7 @@ public abstract class PluginFileLoaderAbstract
      */
     public PluginFileLoaderAbstract(final @NotNull UnikoHyperSpacePlugin plugin, final @NotNull String path, final @NotNull String name) {
         super(plugin, path, name, false);
+
     }
 
     /**

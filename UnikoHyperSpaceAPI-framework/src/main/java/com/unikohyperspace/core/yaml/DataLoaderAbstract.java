@@ -28,7 +28,9 @@ public abstract class DataLoaderAbstract
     /**
      * 初始化相關動作
      */
-    protected abstract void initDataLoader();
+    protected abstract void initDataLoader(
+
+    );
 
     /**
      * 用於保存檔案資料

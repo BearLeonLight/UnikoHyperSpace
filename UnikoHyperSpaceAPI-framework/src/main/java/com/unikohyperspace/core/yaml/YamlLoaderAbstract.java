@@ -3,6 +3,7 @@ package com.unikohyperspace.core.yaml;
 import com.unikohyperspace.Utils;
 import com.unikohyperspace.api.plugin.UnikoHyperSpacePlugin;
 import com.unikohyperspace.api.yaml.YamlSection;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.inventory.ItemStack;
@@ -118,6 +119,12 @@ public abstract class YamlLoaderAbstract extends FileLoaderAbstract
     public final ItemStack getItemStack(final @NotNull String var1) {
         final ItemStack itemStack = this.configuration.getItemStack(var1);
         return itemStack != null ? itemStack : new ItemStack(Material.AIR);
+    }
+
+    @NotNull
+    public final Location getLocation(final @NotNull String var1) {
+        final Location location = this.configuration.getLocation(var1);
+        return location;
     }
 
     /**

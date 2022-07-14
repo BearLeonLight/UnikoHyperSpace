@@ -10,7 +10,6 @@ import org.jetbrains.annotations.NotNull;
 public final class UnikoHyperSpaceAPI extends UnikoHyperSpacePluginBase {
     // 插件標題
 
-    public static final String PLUGIN_TITLE = "§7[§fUnikoHyperSpace§6API§7] §r";
 
     /**
      * 獲取當前插件實
@@ -21,6 +20,7 @@ public final class UnikoHyperSpaceAPI extends UnikoHyperSpacePluginBase {
     public static UnikoHyperSpaceAPI getInstance() {
 
         return JavaPlugin.getPlugin(UnikoHyperSpaceAPI.class);
+
     }
 
     /**
@@ -36,5 +36,11 @@ public final class UnikoHyperSpaceAPI extends UnikoHyperSpacePluginBase {
         final PluginCommand command = this.getCommand("UnikoHyperSpaceAPI");
         MainCommand MainCommand = new MainCommand(this);
         if (command != null) command.setExecutor(MainCommand);
+
+    }
+
+    @PluginRegister(name = "UnikoHyperSpaceAPI-Load", type = PluginRegister.ActionType.ACTION_LOAD)
+    private void load() {
+        this.setPLUGIN_TITLE("§7[§fUnikoHyperSpace§6API§7] §r");
     }
 }

@@ -74,7 +74,9 @@ public abstract class SubCommand implements ISubCommand {
         } else if (args.length == getNextNode() + 1) {
             list.addAll(commandNods.getCommandsMap().keySet().stream().toList());
         }
-        list.addAll(this.onExecutableTab(sender, args));
+        List<String> eList = this.onExecutableTab(sender, args);
+        if (eList != null) list.addAll(this.onExecutableTab(sender, args));
+
         return list;
 
     }

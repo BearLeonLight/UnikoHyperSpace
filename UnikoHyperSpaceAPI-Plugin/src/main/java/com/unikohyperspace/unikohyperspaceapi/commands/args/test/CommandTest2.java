@@ -17,7 +17,6 @@ public class CommandTest2 extends SubCommand {
         super("Test2", 1, SenderType.ANY_SENDER, "Test2", unikoHyperSpacePluginBase);
 
     }
-
     @Override
     public boolean onExecutableCmd(@NotNull CommandSender sender, @NotNull String[] args) {
         if (args.length > getNextNode() + 1) {
@@ -32,9 +31,7 @@ public class CommandTest2 extends SubCommand {
     public @Nullable List<String> onExecutableTab(@NotNull CommandSender sender, @NotNull String[] args) {
         final List<String> list = new ArrayList<>();
         if (args.length > getNextNode() + 1) {
-
             if (args[getNextNode()].equalsIgnoreCase("T2")) return new CommandTest3(getPlugin()).onTab(sender, args);
-
             return new CommandChackPlayer(getPlugin()).onTab(sender, args);
         }
         if (args.length == getNextNode() + 1) {
@@ -42,7 +39,6 @@ public class CommandTest2 extends SubCommand {
             list.add("T2-2");
             list.add("T2-3");
         }
-
         return list;
     }
 }

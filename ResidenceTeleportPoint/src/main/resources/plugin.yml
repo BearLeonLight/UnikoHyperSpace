@@ -4,6 +4,7 @@ version: 1.0
 depend:
   - UnikoHyperSpaceAPI
   - Residence
+  - WorldGuard
 commands:
   ResidenceTeleportPoint:
     description: "該插件的主要命令。"
